@@ -4,35 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Toddler Tantrum Guide — Calm-Down Scripts for Ages 1–4</title>
+  <meta name="description" content="Simple, step-by-step calm-down scripts for toddler tantrums, ages 1–4. Instant PDF download with a printable fridge cheat sheet.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
+  <!-- Gumroad overlay checkout -->
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+
   <style>
-    /* ==========================================================================
-       Shopify-Inspired Design System & Color Palette (Sampled from PDF)
-       ========================================================================== */
     :root {
       --bg-cream: #FAF8F5;
       --bg-card: #FFFFFF;
       --text-dark: #1E252B;
       --text-muted: #5C6773;
       --border-subtle: #EBE6DF;
-      
-      /* PDF Accent Colors */
       --pill-mint: #DDF1E8;
       --pill-mint-text: #245A44;
-      --accent-blush: #FCECE8;
-      --accent-blush-border: #F8D6CD;
-      --accent-yellow: #FBE698;
       --accent-blue: #E3EDF9;
-      --accent-purple: #ECE8F7;
-      
-      --brand-primary: #1F2937;
-      --brand-btn-hover: #374151;
       --cta-green: #2B7A58;
       --cta-green-hover: #226347;
-
       --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
       --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.06), 0 8px 10px -6px rgba(0,0,0,0.04);
       --radius-sm: 10px;
@@ -40,11 +31,8 @@
       --radius-pill: 9999px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -54,9 +42,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ==========================================================================
-       Top Notification Bar & Navigation (Classic Shopify Header)
-       ========================================================================== */
+    /* Announcement bar & header */
     .announcement-bar {
       background-color: var(--pill-mint-text);
       color: #fff;
@@ -66,11 +52,7 @@
       padding: 9px 16px;
       letter-spacing: 0.02em;
     }
-
-    .announcement-bar span {
-      opacity: 0.9;
-      font-weight: 400;
-    }
+    .announcement-bar span { opacity: 0.9; font-weight: 400; }
 
     header {
       background: var(--bg-card);
@@ -79,7 +61,6 @@
       top: 0;
       z-index: 50;
     }
-
     .nav-container {
       max-width: 1160px;
       margin: 0 auto;
@@ -88,7 +69,6 @@
       align-items: center;
       justify-content: space-between;
     }
-
     .logo {
       font-weight: 800;
       font-size: 1.15rem;
@@ -98,51 +78,30 @@
       align-items: center;
       gap: 8px;
     }
-
     .logo-dot {
-      width: 10px;
-      height: 10px;
+      width: 10px; height: 10px;
       background-color: #FBBF24;
       border-radius: 50%;
       display: inline-block;
     }
+    .nav-links { display: flex; gap: 24px; list-style: none; font-size: 0.9rem; font-weight: 600; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text-dark); }
 
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-dark);
-    }
-
-    .header-cart-btn {
-      background: var(--bg-cream);
-      border: 1px solid var(--border-subtle);
-      padding: 8px 16px;
+    .header-buy-btn {
+      background: var(--text-dark);
+      color: #fff;
+      padding: 9px 18px;
       border-radius: var(--radius-pill);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.85rem;
-      cursor: pointer;
       text-decoration: none;
-      color: var(--text-dark);
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
 
-    /* ==========================================================================
-       Shopify Product Layout (2-Column Hero)
-       ========================================================================== */
+    /* Product hero */
     .product-section {
       max-width: 1160px;
       margin: 40px auto 60px;
@@ -152,13 +111,7 @@
       gap: 56px;
       align-items: start;
     }
-
-    /* Gallery / Mockup Column */
-    .product-gallery {
-      position: sticky;
-      top: 90px;
-    }
-
+    .product-gallery { position: sticky; top: 90px; }
     .pdf-mockup-wrapper {
       background: linear-gradient(145deg, #F3F7F5 0%, #FEEFEA 100%);
       border-radius: var(--radius-md);
@@ -169,7 +122,6 @@
       position: relative;
       box-shadow: var(--shadow-sm);
     }
-
     .book-cover {
       background: #FFFFFF;
       width: 100%;
@@ -184,17 +136,13 @@
       position: relative;
       border: 1px solid #ECECEC;
     }
-
     .book-cover::before {
       content: "";
       position: absolute;
-      left: 12px;
-      top: 0;
-      bottom: 0;
+      left: 12px; top: 0; bottom: 0;
       width: 2px;
       background: rgba(0,0,0,0.05);
     }
-
     .cover-pill {
       align-self: flex-start;
       background: #E8F3EE;
@@ -206,36 +154,10 @@
       padding: 4px 12px;
       border-radius: var(--radius-pill);
     }
-
-    .cover-title {
-      margin-top: 18px;
-      font-size: 1.85rem;
-      font-weight: 800;
-      line-height: 1.15;
-      color: #17212B;
-    }
-
-    .cover-subtitle {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: #4B5563;
-      margin-top: 8px;
-    }
-
-    .cover-blurb {
-      font-size: 0.78rem;
-      color: #6B7280;
-      line-height: 1.45;
-      margin-top: 14px;
-    }
-
-    .cover-footer-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: auto;
-    }
-
+    .cover-title { margin-top: 18px; font-size: 1.85rem; font-weight: 800; line-height: 1.15; color: #17212B; }
+    .cover-subtitle { font-size: 0.92rem; font-weight: 600; color: #4B5563; margin-top: 8px; }
+    .cover-blurb { font-size: 0.78rem; color: #6B7280; line-height: 1.45; margin-top: 14px; }
+    .cover-footer-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-right: 52px; }
     .cover-tag-chip {
       font-size: 0.62rem;
       font-weight: 700;
@@ -246,86 +168,27 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-
     .cover-sun-dot {
-      width: 44px;
-      height: 44px;
+      width: 44px; height: 44px;
       background: #F8CF47;
       border-radius: 50%;
       position: absolute;
-      bottom: 24px;
-      right: 24px;
+      bottom: 24px; right: 24px;
     }
 
-    .thumbnails {
-      display: flex;
-      gap: 12px;
-      margin-top: 16px;
-      justify-content: center;
-    }
-
-    .thumb {
-      width: 68px;
-      height: 68px;
-      background: var(--bg-card);
-      border: 1.5px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.68rem;
+    .product-info { display: flex; flex-direction: column; }
+    .badge-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .info-chip {
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--text-muted);
-      cursor: pointer;
-      text-align: center;
-      padding: 6px;
+      background: #fff;
+      border: 1px solid var(--border-subtle);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
     }
-
-    .thumb.active {
-      border-color: var(--pill-mint-text);
-      background: #F0F9F5;
-      color: var(--pill-mint-text);
-    }
-
-    /* Product Info Column */
-    .product-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .badge-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .rating-stars {
-      color: #F59E0B;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-    }
-
-    .rating-count {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .product-title {
-      font-size: 2.3rem;
-      font-weight: 800;
-      line-height: 1.2;
-      color: var(--text-dark);
-      letter-spacing: -0.02em;
-    }
-
-    .product-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-top: 8px;
-      font-weight: 500;
-    }
+    .product-title { font-size: 2.3rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; }
+    .product-subtitle { font-size: 1.1rem; color: var(--text-muted); margin-top: 8px; font-weight: 500; }
 
     .price-box {
       display: flex;
@@ -335,20 +198,8 @@
       padding-bottom: 20px;
       border-bottom: 1px solid var(--border-subtle);
     }
-
-    .price-current {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--text-dark);
-    }
-
-    .price-regular {
-      font-size: 1.25rem;
-      color: #9CA3AF;
-      text-decoration: line-through;
-    }
-
-    .price-save {
+    .price-current { font-size: 2rem; font-weight: 800; }
+    .price-note {
       background-color: var(--pill-mint);
       color: var(--pill-mint-text);
       font-size: 0.78rem;
@@ -358,33 +209,11 @@
       text-transform: uppercase;
     }
 
-    .product-value-bullets {
-      list-style: none;
-      margin-bottom: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    .product-value-bullets { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 10px; }
+    .product-value-bullets li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: #374151; }
+    .bullet-check { color: var(--cta-green); font-weight: 800; }
 
-    .product-value-bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.95rem;
-      color: #374151;
-    }
-
-    .bullet-check {
-      color: var(--cta-green);
-      font-weight: 800;
-    }
-
-    /* Actions */
-    .cta-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    .cta-container { display: flex; flex-direction: column; gap: 12px; }
 
     .btn-buy {
       background: var(--cta-green);
@@ -396,25 +225,18 @@
       border-radius: var(--radius-pill);
       text-decoration: none;
       display: block;
-      transition: all 0.2s ease;
+      transition: background 0.2s ease, transform 0.2s ease;
       box-shadow: 0 4px 14px rgba(43, 122, 88, 0.35);
       border: none;
       cursor: pointer;
     }
-
-    .btn-buy:hover {
-      background: var(--cta-green-hover);
-      transform: translateY(-1px);
-    }
+    .btn-buy:hover { background: var(--cta-green-hover); transform: translateY(-1px); }
+    .btn-inline { display: inline-block; padding: 12px 28px; font-size: 0.92rem; }
 
     .instant-download-text {
       text-align: center;
       font-size: 0.8rem;
       color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
     }
 
     .guarantee-card {
@@ -427,37 +249,18 @@
       align-items: center;
       gap: 14px;
     }
+    .guarantee-icon { font-size: 1.8rem; }
+    .guarantee-text h4 { font-size: 0.9rem; font-weight: 700; }
+    .guarantee-text p { font-size: 0.8rem; color: var(--text-muted); }
 
-    .guarantee-icon {
-      font-size: 1.8rem;
-    }
-
-    .guarantee-text h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .guarantee-text p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       Shopify "Icon Grid / Value Props" Section
-       ========================================================================== */
+    /* Features */
     .features-section {
       background: #FFFFFF;
       border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
       padding: 64px 24px;
     }
-
-    .section-header {
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 48px;
-    }
-
+    .section-header { text-align: center; max-width: 650px; margin: 0 auto 48px; }
     .section-pill {
       display: inline-block;
       background: var(--pill-mint);
@@ -470,19 +273,8 @@
       border-radius: var(--radius-pill);
       margin-bottom: 12px;
     }
-
-    .section-title {
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: var(--text-dark);
-      line-height: 1.25;
-    }
-
-    .section-sub {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
+    .section-title { font-size: 1.9rem; font-weight: 800; line-height: 1.25; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); margin-top: 10px; }
 
     .grid-4 {
       max-width: 1160px;
@@ -491,7 +283,6 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 24px;
     }
-
     .feature-card {
       background: var(--bg-cream);
       padding: 28px 24px;
@@ -499,11 +290,7 @@
       border: 1px solid var(--border-subtle);
       transition: transform 0.2s;
     }
-
-    .feature-card:hover {
-      transform: translateY(-4px);
-    }
-
+    .feature-card:hover { transform: translateY(-4px); }
     .card-tag {
       font-size: 0.72rem;
       font-weight: 700;
@@ -513,33 +300,15 @@
       display: inline-block;
       margin-bottom: 14px;
     }
-
     .tag-mint { background: var(--pill-mint); color: var(--pill-mint-text); }
     .tag-blush { background: #FDE8E2; color: #9A3412; }
     .tag-blue { background: var(--accent-blue); color: #1E40AF; }
     .tag-yellow { background: #FEF3C7; color: #92400E; }
+    .feature-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
 
-    .feature-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .feature-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* ==========================================================================
-       Interactive Sneak Peek: Say This / Not That (Page 12 of PDF)
-       ========================================================================== */
-    .preview-section {
-      max-width: 900px;
-      margin: 70px auto;
-      padding: 0 24px;
-    }
-
+    /* Say this, not that */
+    .preview-section { max-width: 900px; margin: 70px auto; padding: 0 24px; }
     .comparison-table-card {
       background: #FFFFFF;
       border-radius: var(--radius-md);
@@ -547,13 +316,17 @@
       overflow: hidden;
       box-shadow: var(--shadow-sm);
     }
-
     .comparison-header {
-      padding: 24px 28px;
+      padding: 20px 28px;
       border-bottom: 1px solid var(--border-subtle);
-      background: #FDFEFE;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
     }
-
     .comparison-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -562,36 +335,12 @@
       font-size: 0.92rem;
       align-items: center;
     }
+    .comparison-row:last-child { border-bottom: none; }
+    .col-not-that { color: #991B1B; font-weight: 500; }
+    .col-try-this { color: var(--pill-mint-text); font-weight: 600; }
 
-    .comparison-row:last-child {
-      border-bottom: none;
-    }
-
-    .col-not-that {
-      color: #991B1B;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .col-try-this {
-      color: var(--pill-mint-text);
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* ==========================================================================
-       The Fridge Cheat Sheet Callout
-       ========================================================================== */
-    .fridge-banner {
-      max-width: 1160px;
-      margin: 40px auto 80px;
-      padding: 0 24px;
-    }
-
+    /* Fridge cheat sheet */
+    .fridge-banner { max-width: 1160px; margin: 40px auto 80px; padding: 0 24px; }
     .fridge-inner {
       background: linear-gradient(135deg, #FFF9EA 0%, #F5FBEF 100%);
       border: 1.5px dashed #D6D3A5;
@@ -602,7 +351,6 @@
       gap: 40px;
       align-items: center;
     }
-
     .fridge-card-preview {
       background: #FFFFFF;
       border: 1px solid #E5E7EB;
@@ -611,7 +359,6 @@
       box-shadow: var(--shadow-md);
       font-size: 0.85rem;
     }
-
     .fridge-step {
       background: #F9FAFB;
       border-left: 3px solid var(--pill-mint-text);
@@ -620,68 +367,27 @@
       border-radius: 4px;
     }
 
-    /* ==========================================================================
-       Social Proof / Reviews Section
-       ========================================================================== */
-    .reviews-section {
-      background: #FFFFFF;
-      border-top: 1px solid var(--border-subtle);
-      padding: 70px 24px;
-    }
-
-    .reviews-grid {
+    /* Who it's for */
+    .who-section { background: #FFFFFF; border-top: 1px solid var(--border-subtle); padding: 70px 24px; }
+    .who-grid {
       max-width: 1160px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
-
-    .review-card {
+    .who-card {
       background: var(--bg-cream);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
       padding: 24px;
     }
+    .who-card .who-emoji { font-size: 1.6rem; margin-bottom: 10px; }
+    .who-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .who-card p { font-size: 0.9rem; color: var(--text-muted); }
 
-    .review-stars {
-      color: #F59E0B;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-    }
-
-    .review-text {
-      font-size: 0.9rem;
-      color: #374151;
-      font-style: italic;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-
-    .review-author {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .verified-buyer {
-      color: var(--cta-green);
-      font-size: 0.72rem;
-      font-weight: 600;
-    }
-
-    /* ==========================================================================
-       Shopify Accordion (FAQ)
-       ========================================================================== */
-    .faq-section {
-      max-width: 780px;
-      margin: 70px auto;
-      padding: 0 24px;
-    }
-
+    /* FAQ */
+    .faq-section { max-width: 780px; margin: 70px auto; padding: 0 24px; }
     .faq-item {
       background: #FFFFFF;
       border: 1px solid var(--border-subtle);
@@ -689,7 +395,6 @@
       margin-bottom: 12px;
       overflow: hidden;
     }
-
     .faq-question {
       padding: 20px 24px;
       font-weight: 700;
@@ -700,32 +405,12 @@
       align-items: center;
       user-select: none;
     }
+    .faq-answer { padding: 0 24px 20px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.55; display: none; }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-icon { font-weight: 400; font-size: 1.2rem; transition: transform 0.2s; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
 
-    .faq-answer {
-      padding: 0 24px 20px;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.55;
-      display: none;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    .faq-icon {
-      font-weight: 400;
-      font-size: 1.2rem;
-      transition: transform 0.2s;
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    /* ==========================================================================
-       Footer & Sticky Mobile CTA Bar
-       ========================================================================== */
+    /* Footer & sticky mobile bar */
     footer {
       background: #FFFFFF;
       border-top: 1px solid var(--border-subtle);
@@ -734,24 +419,13 @@
       font-size: 0.82rem;
       color: var(--text-muted);
     }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 16px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 16px; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--text-dark); }
 
     .sticky-mobile-bar {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       background: #FFFFFF;
       border-top: 1px solid var(--border-subtle);
       padding: 12px 20px;
@@ -761,19 +435,7 @@
       box-shadow: 0 -4px 12px rgba(0,0,0,0.06);
       z-index: 100;
     }
-
-    .sticky-price {
-      font-size: 1.2rem;
-      font-weight: 800;
-    }
-
-    .sticky-price span {
-      font-size: 0.8rem;
-      color: #9CA3AF;
-      text-decoration: line-through;
-      margin-left: 4px;
-    }
-
+    .sticky-price { font-size: 1.2rem; font-weight: 800; }
     .btn-mobile-buy {
       background: var(--cta-green);
       color: #fff;
@@ -784,44 +446,75 @@
       font-size: 0.9rem;
     }
 
+    /* Keep our own button styles when gumroad.js adds its "gumroad-button" styling */
+    a.gumroad-button {
+      font-family: inherit !important;
+      text-shadow: none !important;
+      background-image: none !important;
+      height: auto !important;
+      line-height: 1.3 !important;
+    }
+    a.gumroad-button .gumroad-button-logo { display: none !important; }
+    a.btn-buy.gumroad-button {
+      background: var(--cta-green) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: var(--radius-pill) !important;
+      box-shadow: 0 4px 14px rgba(43, 122, 88, 0.35) !important;
+      font-size: 1.05rem !important;
+      font-weight: 700 !important;
+      padding: 18px 24px !important;
+      display: block !important;
+      text-align: center !important;
+    }
+    a.btn-buy.btn-inline.gumroad-button {
+      display: inline-block !important;
+      padding: 12px 28px !important;
+      font-size: 0.92rem !important;
+    }
+    a.btn-buy.gumroad-button:hover { background: var(--cta-green-hover) !important; }
+    a.btn-mobile-buy.gumroad-button {
+      background: var(--cta-green) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: var(--radius-pill) !important;
+      box-shadow: none !important;
+      font-size: 0.9rem !important;
+      font-weight: 700 !important;
+      padding: 10px 20px !important;
+    }
+    a.header-buy-btn.gumroad-button {
+      background: var(--text-dark) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: var(--radius-pill) !important;
+      box-shadow: none !important;
+      font-size: 0.85rem !important;
+      font-weight: 700 !important;
+      padding: 9px 18px !important;
+    }
+
     @media (min-width: 860px) {
-      .sticky-mobile-bar {
-        display: none;
-      }
-      footer {
-        padding-bottom: 40px;
-      }
+      .sticky-mobile-bar { display: none; }
+      footer { padding-bottom: 40px; }
     }
 
     @media (max-width: 860px) {
-      .product-section {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .product-gallery {
-        position: static;
-      }
-      .fridge-inner {
-        grid-template-columns: 1fr;
-      }
-      .comparison-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-      .nav-links {
-        display: none;
-      }
+      .product-section { grid-template-columns: 1fr; gap: 32px; }
+      .product-gallery { position: static; }
+      .fridge-inner { grid-template-columns: 1fr; padding: 28px; }
+      .comparison-row { grid-template-columns: 1fr; gap: 8px; }
+      .nav-links { display: none; }
+      .product-title { font-size: 1.9rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Shopify Announcement Bar -->
   <div class="announcement-bar">
-    ✨ INSTANT DIGITAL DOWNLOAD • <span>Read on your phone or print at home immediately after checkout</span>
+    ✨ INSTANT DIGITAL DOWNLOAD • <span>Read on your phone or print at home right after checkout</span>
   </div>
 
-  <!-- Store Navigation Header -->
   <header>
     <div class="nav-container">
       <a href="#" class="logo">
@@ -831,20 +524,18 @@
       <ul class="nav-links">
         <li><a href="#what-inside">What's Inside</a></li>
         <li><a href="#scripts">Sneak Peek</a></li>
-        <li><a href="#reviews">Parent Reviews</a></li>
+        <li><a href="#who">Who It's For</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a href="#checkout" class="header-cart-btn">
-        🛒 Cart (1)
+      <a href="https://parentinguides.gumroad.com/l/TheToddlerTantrumGuide" class="header-buy-btn gumroad-button" data-gumroad-overlay-checkout="true">
+        Buy — $9
       </a>
     </div>
   </header>
 
-  <!-- Main Product Section (Shopify Product Template) -->
   <main>
-    <section class="product-section" id="checkout">
-      
-      <!-- Product Gallery / Realistic Digital Book Mockup -->
+    <section class="product-section" id="buy">
+
       <div class="product-gallery">
         <div class="pdf-mockup-wrapper">
           <div class="book-cover">
@@ -856,7 +547,6 @@
                 Simple words to say, step by step, when your little one's big feelings take over — so you both can find calm again.
               </p>
             </div>
-            
             <div class="cover-footer-tags">
               <span class="cover-tag-chip">Why Tantrums Happen</span>
               <span class="cover-tag-chip">Scripts by Age</span>
@@ -866,29 +556,21 @@
             <div class="cover-sun-dot"></div>
           </div>
         </div>
-
-        <div class="thumbnails">
-          <div class="thumb active">Cover</div>
-          <div class="thumb">C.A.L.M. Method</div>
-          <div class="thumb">Scripts by Age</div>
-          <div class="thumb">Fridge Sheet</div>
-        </div>
       </div>
 
-      <!-- Product Purchasing Info -->
       <div class="product-info">
         <div class="badge-bar">
-          <div class="rating-stars">★★★★★</div>
-          <div class="rating-count">4.9 / 5 (1,420+ calm parents)</div>
+          <span class="info-chip">📄 15-page PDF</span>
+          <span class="info-chip">👶 Ages 1–4</span>
+          <span class="info-chip">🖨️ Printable cheat sheet</span>
         </div>
 
         <h1 class="product-title">The Toddler Tantrum Guide</h1>
-        <div class="product-subtitle">Peaceful, research-backed calm-down scripts for ages 1 through 4</div>
+        <div class="product-subtitle">Gentle, step-by-step calm-down scripts for ages 1 through 4</div>
 
         <div class="price-box">
           <span class="price-current">$9.00</span>
-          <span class="price-regular">$19.00</span>
-          <span class="price-save">Save 52%</span>
+          <span class="price-note">Instant download</span>
         </div>
 
         <ul class="product-value-bullets">
@@ -911,30 +593,29 @@
         </ul>
 
         <div class="cta-container">
-          <button class="btn-buy" onclick="alert('Proceeding to Shopify secure checkout simulation...')">
+          <a href="https://parentinguides.gumroad.com/l/TheToddlerTantrumGuide" class="btn-buy gumroad-button" data-gumroad-overlay-checkout="true">
             Get Instant Access — Just $9
-          </button>
+          </a>
           <p class="instant-download-text">
-            ⚡ Instant PDF file delivered directly to your email inbox (15 pages).
+            ⚡ Secure checkout via Gumroad. Your PDF is sent to your email instantly.
           </p>
         </div>
 
         <div class="guarantee-card">
           <div class="guarantee-icon">🛡️</div>
           <div class="guarantee-text">
-            <h4>Peace-of-Mind Guarantee</h4>
-            <p>Try the scripts for 30 days. If your days don't feel calmer and more manageable, email us for a 100% full refund.</p>
+            <h4>30-Day Money-Back Guarantee</h4>
+            <p>Try the scripts for 30 days. If they don't help, email us for a full refund.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Value Props / Feature Grid (PDF Breakdown) -->
     <section class="features-section" id="what-inside">
       <div class="section-header">
         <span class="section-pill">Inside The 15-Page Guide</span>
         <h2 class="section-title">Everything you need when big feelings take over</h2>
-        <p class="section-sub">No 300-page psychology textbooks. Just realistic, compassionate scripts that work in the heat of the moment.</p>
+        <p class="section-sub">No 300-page textbooks. Just realistic, compassionate scripts you can use in the heat of the moment.</p>
       </div>
 
       <div class="grid-4">
@@ -943,28 +624,24 @@
           <h3>The C.A.L.M. Method</h3>
           <p>Four easy steps: <strong>Connect</strong>, <strong>Acknowledge</strong>, <strong>Limit (kindly)</strong>, and <strong>Move forward</strong>. Your child borrows your calm.</p>
         </div>
-
         <div class="feature-card">
           <span class="card-tag tag-blush">Part 5</span>
           <h3>Age-Tailored Phrasing</h3>
           <p>A 1-year-old needs different words than a 4-year-old. Get bite-sized phrases (2–4 words) up to cooperative problem-solving tools.</p>
         </div>
-
         <div class="feature-card">
           <span class="card-tag tag-blue">Part 6</span>
           <h3>Everyday Scenarios</h3>
-          <p>Field-tested scripts for turning off the TV, leaving the playground, getting dressed, bedtime routines, and toy sharing disputes.</p>
+          <p>Scripts for turning off the TV, leaving the playground, getting dressed, bedtime routines, and toy sharing disputes.</p>
         </div>
-
         <div class="feature-card">
           <span class="card-tag tag-yellow">Part 8 & Cheat Sheet</span>
           <h3>Prevent & Repair</h3>
-          <p>6 daily habits that cut down tantrums before they start, plus a 1-page printable summary for your refrigerator or diaper bag.</p>
+          <p>6 daily habits that cut down tantrums before they start, plus a 1-page printable summary for your fridge or diaper bag.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sneak Peek: Say This, Not That (Page 12 of PDF) -->
     <section class="preview-section" id="scripts">
       <div class="section-header">
         <span class="section-pill">Sneak Peek • Page 12</span>
@@ -974,27 +651,21 @@
 
       <div class="comparison-table-card">
         <div class="comparison-header">
-          <div style="display:flex; justify-content:space-between; font-weight:700; font-size:0.85rem; text-transform:uppercase; color:var(--text-muted); letter-spacing:0.05em;">
-            <span>Instead of saying...</span>
-            <span>Try saying this...</span>
-          </div>
+          <span>Instead of saying...</span>
+          <span>Try saying this...</span>
         </div>
-
         <div class="comparison-row">
           <div class="col-not-that">✕ "Stop crying!"</div>
           <div class="col-try-this">✓ "It's OK to cry. I'm right here."</div>
         </div>
-
         <div class="comparison-row">
           <div class="col-not-that">✕ "Calm down!"</div>
           <div class="col-try-this">✓ "Let's take a big breath together."</div>
         </div>
-
         <div class="comparison-row">
           <div class="col-not-that">✕ "Why are you acting like this?"</div>
           <div class="col-try-this">✓ "Something feels really hard right now."</div>
         </div>
-
         <div class="comparison-row">
           <div class="col-not-that">✕ "Fine, just have the cookie."</div>
           <div class="col-try-this">✓ "You really want it. The answer is still no."</div>
@@ -1002,18 +673,16 @@
       </div>
     </section>
 
-    <!-- Fridge Cheat Sheet Highlight -->
     <section class="fridge-banner">
       <div class="fridge-inner">
         <div>
           <span class="section-pill" style="background:#FFF; color:#B45309;">Page 15 Bonus</span>
           <h2 style="font-size:1.8rem; font-weight:800; margin:10px 0 14px;">The Fridge Cheat Sheet</h2>
           <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:20px;">
-            In the middle of screaming, reading an article is impossible. Print Page 15, stick it on your fridge or save it as your phone wallpaper for instant clarity.
+            In the middle of a meltdown, reading an article is impossible. Print page 15, stick it on your fridge, or save it as your phone wallpaper.
           </p>
-          <a href="#checkout" class="btn-buy" style="display:inline-block; padding:12px 28px; font-size:0.92rem;">Get The Printable Sheet</a>
+          <a href="https://parentinguides.gumroad.com/l/TheToddlerTantrumGuide" class="btn-buy btn-inline gumroad-button" data-gumroad-overlay-checkout="true">Get The Guide — $9</a>
         </div>
-
         <div class="fridge-card-preview">
           <div style="font-weight:800; font-size:0.95rem; margin-bottom:10px; color:#1F2937;">📌 Tantrum in progress?</div>
           <div class="fridge-step"><strong>1. Calm me first:</strong> Stop. 3 slow breaths. Get low.</div>
@@ -1025,35 +694,30 @@
       </div>
     </section>
 
-    <!-- Social Proof Reviews -->
-    <section class="reviews-section" id="reviews">
+    <section class="who-section" id="who">
       <div class="section-header">
-        <span class="section-pill">Real Parent Reviews</span>
-        <h2 class="section-title">Tested in real living rooms and grocery stores</h2>
+        <span class="section-pill">Who It's For</span>
+        <h2 class="section-title">Made for real living rooms and grocery stores</h2>
       </div>
-
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"The grocery store picture trick from page 10 saved my sanity today. Instead of a screaming fit in aisle 4, we took a photo of the toy and walked out peacefully."</p>
-          <div class="review-author">Sarah M., Mom of a 2-year-old <span class="verified-buyer">✓ Verified</span></div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-emoji">🛒</div>
+          <h3>Parents dreading public meltdowns</h3>
+          <p>Ready-to-use words for the store, the park, and the car seat — so you're not improvising under pressure.</p>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"I love that it doesn't shame you for losing your patience. The section on how to repair after you've yelled made me tear up. Essential reading for every toddler home."</p>
-          <div class="review-author">David K., Dad of twins <span class="verified-buyer">✓ Verified</span></div>
+        <div class="who-card">
+          <div class="who-emoji">💛</div>
+          <h3>Parents who want to stay gentle and firm</h3>
+          <p>Hold kind limits without giving in, yelling, or bribing — plus how to repair when a moment goes badly.</p>
         </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">"The distinction between big feelings vs. tiny brakes completely shifted how I react. My daughter went from 20-minute meltdowns to calming down in 3 minutes."</p>
-          <div class="review-author">Elena R., Mom of a 3-year-old <span class="verified-buyer">✓ Verified</span></div>
+        <div class="who-card">
+          <div class="who-emoji">⏱️</div>
+          <h3>Busy parents with no time to read</h3>
+          <p>15 pages, skimmable in one sitting, with a one-page cheat sheet for the moments that count.</p>
         </div>
       </div>
     </section>
 
-    <!-- Accordion FAQ -->
     <section class="faq-section" id="faq">
       <div class="section-header">
         <span class="section-pill">Got Questions?</span>
@@ -1066,7 +730,7 @@
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          Immediately after checkout, you will receive an instant download link on your screen and an email containing your high-resolution 15-page PDF document. You can read it directly on your smartphone, tablet, e-reader, or print it at home.
+          Right after checkout you'll get a download link on screen and by email. You can read the 15-page PDF on your phone, tablet, or computer, or print it at home.
         </div>
       </div>
 
@@ -1076,7 +740,7 @@
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          The guide specifically covers toddlerhood through early preschool (Ages 12 months up to 4 years old), with dedicated sections separating age 1–2, 2–3, and 3–4.
+          Toddlerhood through early preschool (12 months to 4 years), with separate sections for ages 1–2, 2–3, and 3–4.
         </div>
       </div>
 
@@ -1086,49 +750,44 @@
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          Yes! Page 15 is specifically formatted as a crisp 8.5x11 printable cheat sheet ready for your home printer.
+          Yes. Page 15 is formatted as a one-page printable that works on standard home printers.
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="refunds">
         <div class="faq-question">
           What if the scripts don't work for my child?
           <span class="faq-icon">+</span>
         </div>
         <div class="faq-answer">
-          Every child is unique. We offer an unconditional 30-day money-back guarantee. If you don't feel more confident managing big feelings, simply drop us a quick email and we will refund every penny.
+          Every child is different. If the guide doesn't help within 30 days of purchase, email us and we'll refund you in full.
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Sticky Mobile Bar (Shopify Standard for Conversion) -->
   <div class="sticky-mobile-bar">
     <div>
-      <div class="sticky-price">$9.00 <span>$19.00</span></div>
+      <div class="sticky-price">$9.00</div>
       <div style="font-size:0.75rem; color:var(--text-muted);">Instant PDF Access</div>
     </div>
-    <a href="#checkout" class="btn-mobile-buy">Get The Guide</a>
+    <a href="https://parentinguides.gumroad.com/l/TheToddlerTantrumGuide" class="btn-mobile-buy gumroad-button" data-gumroad-overlay-checkout="true">Get The Guide</a>
   </div>
 
-  <!-- Store Footer -->
   <footer>
     <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Pediatric Disclaimer</a>
-      <a href="#">Contact Support</a>
+      <a href="#refunds">Refund Policy</a>
+      <!-- REPLACE hello@example.com with your real support email -->
+      <a href="ttobulevicius@gmail.com">Contact Support</a>
     </div>
     <p>© 2026 Little Calm Co. The Toddler Tantrum Guide. All rights reserved.</p>
     <p style="margin-top:6px; font-size:0.75rem; opacity:0.7;">This guide shares general parenting information and is not a substitute for professional medical advice.</p>
   </footer>
 
-  <!-- Light Accordion Script -->
   <script>
     document.querySelectorAll('.faq-question').forEach(item => {
       item.addEventListener('click', () => {
-        const parent = item.parentElement;
-        parent.classList.toggle('active');
+        item.parentElement.classList.toggle('active');
       });
     });
   </script>
